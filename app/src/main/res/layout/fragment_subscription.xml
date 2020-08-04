@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.SubscriptionFragment">
 
-    <TextView
+    <EditText
+        android:id="@+id/nameText"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/tab_subscription_title" />
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_name"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_email"
+        app:layout_constraintTop_toBottomOf="@id/nameText"/>
+    <EditText
+        android:id="@+id/phoneText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_phone"
+        app:layout_constraintTop_toBottomOf="@id/emailText"/>
 
-</FrameLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/subscribeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_email"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

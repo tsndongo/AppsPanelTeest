@@ -1,9 +1,11 @@
 package com.tsndongo.appspaneltest.model
 
-import java.util.Date
+import com.google.gson.annotations.SerializedName
 
 data class Event(
-    val image: String,
+    @SerializedName("picture_url")
+    val image: String?,
+    @SerializedName("published_at")
     val date: String,
     val title: String,
     val description: String

@@ -12,7 +12,7 @@ class InfoFragment : Fragment() {
 
 
     companion object {
-        fun newInstance(): ActualityFragment = ActualityFragment()
+        fun newInstance(): InfoFragment = InfoFragment()
     }
 
     override fun onCreateView(

@@ -9,8 +9,8 @@ import com.bumptech.glide.Glide
 import com.tsndongo.appspaneltest.R
 import com.tsndongo.appspaneltest.model.Event
 
-class ActualityItemViewHolder(inflater: LayoutInflater, parent: ViewGroup) : RecyclerView.ViewHolder(
-    inflater.inflate(R.layout.item_actuality, parent, false)
+class EventsItemViewHolder(inflater: LayoutInflater, parent: ViewGroup) : RecyclerView.ViewHolder(
+    inflater.inflate(R.layout.item_event, parent, false)
 ) {
 
     private var title: TextView = itemView.findViewById(R.id.title)
@@ -22,7 +22,17 @@ class ActualityItemViewHolder(inflater: LayoutInflater, parent: ViewGroup) : Rec
         title.text = event.title
         description.text = event.title
         date.text = event.title
-        Glide.with(itemView.context).load(event.image).into(image)
+        image.setImageResource(R.mipmap.ic_placeholder)
+
+        event.image?.let{
+            if (event.image.isNotEmpty() && event.image.isNotBlank()) {
+                Glide.with(itemView.context).load(event.image)
+                    .fitCenter()
+                    .placeholder(R.mipmap.ic_placeholder)
+                    .into(image)
+            }
+        }
+
     }
 
 

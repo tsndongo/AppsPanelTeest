@@ -14,26 +14,26 @@ import com.tsndongo.appspaneltest.model.Event
 import com.tsndongo.appspaneltest.model.sortByDate
 import com.tsndongo.appspaneltest.services.ServiceBuilder
 import com.tsndongo.appspaneltest.services.Api
-import kotlinx.android.synthetic.main.fragment_actuality.*
+import kotlinx.android.synthetic.main.fragment_events.*
 import kotlin.collections.ArrayList
 
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ActualityFragment : Fragment() {
+class EventsFragment : Fragment() {
 
     private lateinit var eventList: ArrayList<Event>
 
     companion object {
-        fun newInstance(): ActualityFragment = ActualityFragment()
+        fun newInstance(): EventsFragment = EventsFragment()
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_actuality, container, false)
+        return inflater.inflate(R.layout.fragment_events, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

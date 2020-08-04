@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayout
 import com.tsndongo.appspaneltest.R
-import com.tsndongo.appspaneltest.fragment.ActualityFragment
+import com.tsndongo.appspaneltest.fragment.EventsFragment
 import com.tsndongo.appspaneltest.fragment.InfoFragment
 import com.tsndongo.appspaneltest.fragment.SubscriptionFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -37,10 +37,10 @@ class MainActivity : AppCompatActivity() {
 
         override fun createFragment(position: Int): Fragment {
             return when (position) {
-                1 -> ActualityFragment.newInstance()
+                1 -> EventsFragment.newInstance()
                 2 -> InfoFragment.newInstance()
                 3 -> SubscriptionFragment.newInstance()
-                else -> ActualityFragment.newInstance()
+                else -> EventsFragment.newInstance()
             }
         }
 
