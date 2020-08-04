@@ -10,11 +10,16 @@ import com.tsndongo.appspaneltest.R
 
 class InfoFragment : Fragment() {
 
+
+    companion object {
+        fun newInstance(): ActualityFragment = ActualityFragment()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_actuality, container, false)
+        return inflater.inflate(R.layout.fragment_info, container, false)
     }
 }
