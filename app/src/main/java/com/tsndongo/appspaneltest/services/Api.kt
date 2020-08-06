@@ -1,6 +1,7 @@
 package com.tsndongo.appspaneltest.services
 
 import com.tsndongo.appspaneltest.model.Event
+import com.tsndongo.appspaneltest.model.PostBody
 import com.tsndongo.appspaneltest.model.PostResponse
 import retrofit2.Call
 import retrofit2.http.*
@@ -25,7 +26,5 @@ interface Api {
         "X-AP-DeviceUID: trial",
         "Accept: application/json")
     @POST("/authentication/register")
-    fun postSubscribe(@Query("name") name: String,
-                  @Query("email") email: String,
-                  @Query("phone") phone: String) : Call<PostResponse>
+    fun postSubscribe(@Body body: PostBody) : Call<PostResponse>
 }

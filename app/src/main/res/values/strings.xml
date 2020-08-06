@@ -8,4 +8,6 @@
     <string name="hint_phone">Téléphone</string>
     <string name="button_subscribe">M\'inscrire!</string>
     <string name="success">Vous êtes inscrits</string>
+    <string name="error_empty">Cet information ne peut pas être vide</string>
+    <string name="error_email_format">Cet adresse mail n\'est pas valide</string>
 </resources>
