@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="picture_dimension">100dp</dimen>
+    <dimen name="item_margin">5dp</dimen>
+    <dimen name="item_content_margin">5dp</dimen>
+    <dimen name="item_description_margin">10dp</dimen>
+    <dimen name="recycler_view_padding">10dp</dimen>
 </resources>

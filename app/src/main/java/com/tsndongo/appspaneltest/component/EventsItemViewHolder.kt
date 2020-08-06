@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.tsndongo.appspaneltest.R
 import com.tsndongo.appspaneltest.model.Event
+import com.tsndongo.appspaneltest.model.formatDate
+import java.util.*
 
 class EventsItemViewHolder(inflater: LayoutInflater, parent: ViewGroup) : RecyclerView.ViewHolder(
     inflater.inflate(R.layout.item_event, parent, false)
@@ -20,8 +22,8 @@ class EventsItemViewHolder(inflater: LayoutInflater, parent: ViewGroup) : Recycl
 
     fun bind(event: Event) {
         title.text = event.title
-        description.text = event.title
-        date.text = event.title
+        description.text = event.description
+        date.text = event.date.formatDate()
         image.setImageResource(R.mipmap.ic_placeholder)
 
         event.image?.let{
