@@ -35,9 +35,9 @@ class SubscriptionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val name = nameText.text.toString()
-        val email = emailText.text.toString()
-        val phone = phoneText.text.toString()
+        val name = nameText.editText?.text.toString()
+        val email = emailText.editText?.text.toString()
+        val phone = phoneText.editText?.text.toString()
 
         subscribeButton.isEnabled = name.isNotEmpty() && email.isNotEmpty() && phone.isNotEmpty()
 

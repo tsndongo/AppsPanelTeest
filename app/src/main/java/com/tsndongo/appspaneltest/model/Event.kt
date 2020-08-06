@@ -15,7 +15,7 @@ data class Event(
 )
 
 fun ArrayList<Event>.sortByDate(): ArrayList<Event>{
-    this.sortBy { it.date }
+    this.sortByDescending { it.date }
     return this
 }
 
@@ -28,6 +28,6 @@ fun String.formatDate(): String {
     return when {
         DateUtils.isToday(cal.timeInMillis) -> "aujourd'hui"
         deltaDays == 1 -> "hier"
-        else -> "il y a ${deltaDays} jour(s)"
+        else -> "il y a $deltaDays jour(s)"
     }
 }
